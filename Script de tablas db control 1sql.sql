@@ -30,7 +30,7 @@ create table Empleado (
 	cargo_empleado varchar(200),
 	id_sueldo integer,
 	id_compañia integer,
-	FOREIGN KEY (id_sueldo) REFERENCES Sueldo(id_sueldo)
+	FOREIGN KEY (id_sueldo) REFERENCES Sueldo(id_sueldo),
 	FOREIGN KEY (id_compañia) REFERENCES Compañia(id_compañia)
 );
 
