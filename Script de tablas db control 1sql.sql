@@ -52,7 +52,6 @@ create table Modelo(
 
 create table Avion (
 	id_avion serial primary key,
-	itinerario_avion varchar(200),
 	vuelos_avion int,
 	id_compañia integer,
 	id_modelo integer,
