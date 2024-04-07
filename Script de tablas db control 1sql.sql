@@ -19,23 +19,21 @@ create table Sueldo (
 	fecha_pago_sueldo Date
 );
 
+create table Compañia (
+	id_compañia serial primary key,
+	nombre_compañia varchar(200)
+);
 
 create table Empleado (
 	id_empleado serial primary key,
 	nombre_empleado varchar(200),
 	cargo_empleado varchar(200),
 	id_sueldo integer,
+	id_compañia integer,
 	FOREIGN KEY (id_sueldo) REFERENCES Sueldo(id_sueldo)
+	FOREIGN KEY (id_compañia) REFERENCES Compañia(id_compañia)
 );
 
-
-
-create table Compañia (
-	id_compañia serial primary key,
-	nombre_compañia varchar(200),
-	id_empleado integer,
-	FOREIGN KEY (id_empleado) REFERENCES Empleado(id_empleado)
-);
 
 create table Cliente_compañia (
 	id_cliente_compañia serial primary key,
