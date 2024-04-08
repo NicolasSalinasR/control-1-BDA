@@ -108,5 +108,3 @@ create table Pasaje(
 	FOREIGN KEY (id_costo) REFERENCES Costo(id_costo),
 	FOREIGN KEY (id_seccion) REFERENCES Seccion(id_seccion)
 );
-
-
